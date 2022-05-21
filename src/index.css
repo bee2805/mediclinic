@@ -21,6 +21,32 @@ input{
   border-radius: 20px;
 }
 
+input[type="file"]{
+  margin: 0;
+  background-color: transparent;
+  font-family: 'Open Sans', sans-serif;
+  color: transparent;
+  float: left;
+  background-color: transparent;
+}
+
+label{
+  float: left;
+  margin-top: 2%;
+}
+
+::-webkit-file-upload-button{
+  font-weight: bold;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  padding: 4%;
+  border-radius: 20px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #0C8FA3;
+}
+
 /* Login Page Styling */
 .login{
   width: 100%;
@@ -55,7 +81,7 @@ a{
   text-decoration: underline #9A9A9A;
 }
 
-.loginForm p{
+.loginForm, .registerForm p{
   margin: 0;
   color: #9A9A9A;
 }
@@ -63,13 +89,20 @@ a{
 .button{
   margin: 0 auto;
   margin-top: 2%;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
   width: 100px;
   padding: 2%;
   border-radius: 20px;
-  background-color: #0C8FA3;
+  background-color: #10AFBA;
   color: white;
   font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+}
+
+.button:hover{
+  background-color: #0C8FA3;
+  color: white;
+  cursor: pointer;
 }
 
 /* Login Img */
@@ -80,4 +113,69 @@ a{
   background-position: center;
   background-size: cover;
   float: left;
+}
+
+/* Register Form */
+.Register{
+  width: 100%;
+  height: 100vh;
+}
+
+.registerForm{
+  width: 50%;
+  height: 100vh;
+  float: left;
+  text-align: center;
+}
+
+.registerLogo{
+  width: 30px;
+  height: 30px;
+  padding: 10%;
+  margin: 0 auto;
+  margin-top: 3%;
+  background-image: url('assets/mainLogo.svg');
+  background-position: center;
+  background-size: cover;
+}
+
+.registerForm h1{
+  margin-top: 1%;
+}
+
+.registerForm input{
+  width: 64%;
+  margin-bottom: 2%;
+}
+
+#nameInput, #surnameInput, #ageInput, #genderInput{
+  width: 29%;
+}
+
+#genderInput, #surnameInput{
+  margin-left: 2%;
+}
+
+.registerImg{
+  width: 30%;
+  height: 60vh;
+  padding: 8%;
+  background-image: url('assets/loginImg.jpg');
+  background-size: cover;
+  background-position: center;
+  float: left;
+}
+
+/* Dashboard */
+.dashboard{
+  width: 100%;
+  height: 100vh;
+}
+
+.sideNav{
+  width: 10%;
+  height: 100vh;
+  background-color: #0C8FA3;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }

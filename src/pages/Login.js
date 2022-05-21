@@ -8,7 +8,7 @@ function Login() {
                 <h1>Welcome Back!</h1>
                 <input type="text" className="email" placeholder="Email"/>
                 <input type="text" className="password" placeholder="Password"/>
-                <div className='button'>Login!</div>
+                <a href="/Dashboard.js"><div className='button'>Login!</div></a>
                 <a href=""><p>Forgot Passowrd.</p></a>
                 <a href="/Register.js"><p>Don't have an account? Sign up!</p></a>
             </div>
