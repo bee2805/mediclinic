@@ -1,3 +1,5 @@
+/* basic styling */
+
 body {
   margin: 0;
   padding: 0;
@@ -7,7 +9,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1{
+a:link{
+  text-decoration: none;
+}
+
+h1, h2{
   font-family: 'Montserrat', sans-serif;
   text-align: center;
   color: #0C8FA3;
@@ -47,6 +53,29 @@ label{
   background-color: #0C8FA3;
 }
 
+.button{
+  margin: 0 auto;
+  margin-top: 2%;
+  margin-bottom: 1%;
+  width: 100px;
+  padding: 2%;
+  border-radius: 20px;
+  background-color: #10AFBA;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+}
+
+.button:hover{
+  background-color: #0C8FA3;
+  color: white;
+  cursor: pointer;
+}
+
+/* -------------------------------------------------------------------- */
+
 /* Login Page Styling */
 .login{
   width: 100%;
@@ -77,32 +106,9 @@ label{
   margin-bottom: 3%;
 }
 
-a{
-  text-decoration: underline #9A9A9A;
-}
-
 .loginForm, .registerForm p{
   margin: 0;
   color: #9A9A9A;
-}
-
-.button{
-  margin: 0 auto;
-  margin-top: 2%;
-  margin-bottom: 1%;
-  width: 100px;
-  padding: 2%;
-  border-radius: 20px;
-  background-color: #10AFBA;
-  color: white;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
-}
-
-.button:hover{
-  background-color: #0C8FA3;
-  color: white;
-  cursor: pointer;
 }
 
 /* Login Img */
@@ -114,6 +120,8 @@ a{
   background-size: cover;
   float: left;
 }
+
+/* -------------------------------------------------------------------- */
 
 /* Register Form */
 .Register{
@@ -166,11 +174,14 @@ a{
   float: left;
 }
 
-/* Dashboard */
+/* -------------------------------------------------------------------- */
+/* DASHBOARD */
 .dashboard{
   width: 100%;
   height: 100vh;
 }
+
+/* -------------------------------------------------------------------- */
 
 /* navBar */
 .sideNav{
@@ -181,6 +192,7 @@ a{
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   text-align: center;
+  float: left;
 }
 
 .sideNav p {
@@ -237,4 +249,142 @@ a{
   background-image: url('assets/icons/logOut.png');
   background-position: center;
   background-size: cover;
+}
+
+/* -------------------------------------------------------------------- */
+/* Landing Page */
+
+/* Left-content */
+.leftContent, .rightContent{
+  width: 50%;
+  height: 100vh;
+  float: left;
+}
+
+.editLanding, .editDoctors{
+  width: 93%;
+  height: 100vh;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+/* Intro */
+.intro{
+  width: 100%;
+  height: 20vh;
+}
+
+
+.landingImg{
+  width: 190px;
+  height: 190px;
+  background-image: url('assets/Receptionist.svg');
+  background-position: center;
+  background-size: cover;
+  float: left;
+  margin-left: 4%;
+  margin-top: 1%;
+}
+
+.introBlock{
+  width: 65%;
+  float: left;
+}
+
+.introBlock h1{
+  text-align: left;
+  margin-top: 12%;
+  margin-bottom: 0;
+}
+.introBlock p{
+  text-align: left;
+  margin-top: 1%;
+}
+
+/* Appointents */
+
+.appointments h2{
+  margin-top: 8%;
+  text-align: left;
+  margin-left: 4%;
+}
+
+.row_item{
+  width: 90%;
+  height: 3vh;
+  padding: 2%;
+  background-color: #DBEFEE;
+  border-radius: 20px;
+  margin-left: 4%;
+  margin-bottom: 2vh;
+}
+
+.row_item p{
+  float: left;
+  margin: 0;
+  margin-left: 4%;
+}
+
+.leftContent .button{
+  width: 30%;
+}
+
+/* Right content */
+.upcomingAppointment h2{
+  text-align: left;
+  margin-left: 4%;
+}
+
+.patientDetails{
+  width: 87%;
+  height: 27vh;
+  padding: 2%;
+  background-color: #DBEFEE;
+  margin-left: 4%;
+  border-radius: 20px;
+}
+
+.profilePicture{
+  width: 50%;
+  height: 100%;
+  border: #0C8FA3 6px solid;
+  background-image: url('assets/patients/Patient1.jpg');
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  float: left;
+}
+
+.appointmentDetails{
+  float: left;
+  margin-left: 5%;
+}
+
+/* -------------------------------------------------------------------------------------- */
+/* Doctors Page */
+.editDoctors h1{
+  text-align: left;
+  margin-left: 3%;
+}
+
+.doctorsList{
+  width: 60%;
+  height: 100%;
+  float: left;
+}
+
+.doctorCard{
+  margin-left: 3%;
+  width: 25%;
+  background-color: #DBEFEE;
+}
+
+.doctorProfile{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
