@@ -10,8 +10,11 @@ function SideNav() {
                 <div className="doctors"></div>
                 <p>Doctors</p>
             </a>
-            <div className="patients"></div>
-            <p>Patients</p>
+            <a href="/EditPatients">
+                <div className="patients"></div>
+                <p>Patients</p>
+            </a>
+
             <div className="logout"></div>
             <p>Log Out</p>
         </div> 

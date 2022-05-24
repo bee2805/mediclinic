@@ -166,11 +166,11 @@ hr{
   margin-bottom: 2%;
 }
 
-#nameInput, #surnameInput, #ageInput, #genderInput{
+.registerForm #nameInputRegister, #surnameInputRegister, #ageInputRegister, #genderInputRegister{
   width: 29%;
 }
 
-#genderInput, #surnameInput{
+.registerForm #genderInputRegister, #surnameInputRegister{
   margin-left: 2%;
 }
 
@@ -272,10 +272,19 @@ hr{
   float: left;
 }
 
-.editLanding, .editDoctors{
+.editLanding{
   width: 93%;
   height: 100vh;
   float: left;
+  margin: 0;
+  padding: 0;
+  margin-left: 7%;
+}
+
+.editPatients, .editDoctors{
+  width: 93%;
+  height: 100vh;
+  float: right;
   margin: 0;
   padding: 0;
   margin-left: 7%;
@@ -383,13 +392,18 @@ hr{
   margin-left: 3%;
 }
 
-.doctorsList{
+.editPatients h1{
+  text-align: left;
+  margin-left: 3%;
+}
+
+.doctorsList, .patientsList{
   width: 60%;
   height: 100%;
   float: left;
 }
 
-.doctorCard{
+.doctorCard, .patientCard{
   padding: 2%;
   margin-left: 3%;
   width: 25%;
@@ -498,7 +512,7 @@ hr{
   border: #0C8FA3 4px solid;
 }
 
-#specialiation{
+#specialiation, #medicalAidNo{
   margin-top: 0;
 }
 
@@ -507,7 +521,7 @@ hr{
   margin-bottom: 1%;
 }
 
-.addDoctor{
+.addDoctor, .addPatient{
   width: 40%;
   float: right;
 }
@@ -552,4 +566,137 @@ form{
 
 .addDoctor .button{
   width: 150px;
+}
+
+/* --------------------------------------------------------------------- */
+
+.patientProfile1{
+  margin: 0 auto;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-image: url('assets/patients/Patient1.jpg');
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: #0C8FA3 4px solid;
+}
+
+.patientProfile2{
+  margin: 0 auto;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-image: url('assets/patients/Patient2.jpg');
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: #0C8FA3 4px solid;
+}
+
+.patientProfile3{
+  margin: 0 auto;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-image: url('assets/patients/Patient3.jpg');
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: #0C8FA3 4px solid;
+}
+
+.patientProfile4{
+  margin: 0 auto;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-image: url('assets/patients/Patient4.jpg');
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: #0C8FA3 4px solid;
+}
+
+.patientProfile5{
+  margin: 0 auto;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-image: url('assets/patients/Patient5.jpg');
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: #0C8FA3 4px solid;
+}
+
+.patientProfile6{
+  margin: 0 auto;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-image: url('assets/patients/Patient6.jpg');
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: #0C8FA3 4px solid;
+}
+
+.patientProfile7{
+  margin: 0 auto;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-image: url('assets/patients/Patient7.jpg');
+  background-position: center;
+  background-size: cover;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: #0C8FA3 4px solid;
+}
+
+.patientCard p {
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+.addPatient #nameInput, #surnameInput, #ageInput, #genderInput, #cellInput, #medicalAidNoInput{
+  width: 40%;
+  margin-bottom: 2%;
+}
+
+.addPatient #emailInput, #password{
+  width: 87.5%;
+  margin-bottom: 2%;
+}
+
+.addPatient #cellInput{
+  margin-right: 2%;
+}
+
+.addPatient .button{
+  width: 150px;
+}
+
+.patientImg{
+  margin: 0 auto;
+  margin-top: 4%;
+  width: 80%;
+  height: 300px;
+  background-image: url('assets/patientImg.jpg');
+  background-size: cover;
+  background-position: center;
 }
