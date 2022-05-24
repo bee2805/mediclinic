@@ -170,7 +170,7 @@ hr{
   width: 29%;
 }
 
-.registerForm #genderInputRegister, #surnameInputRegister{
+.registerForm #genderInputRegister, #surnameInputRegister, #surnameInput, #genderInput{
   margin-left: 2%;
 }
 
