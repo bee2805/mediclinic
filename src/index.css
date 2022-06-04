@@ -11,6 +11,7 @@ body {
 
 a:link{
   text-decoration: none;
+  color: #9A9A9A;
 }
 
 h1, h2{
@@ -45,6 +46,13 @@ input[type="file"]{
 label{
   float: left;
   margin-top: 2%;
+}
+
+.register form{
+  margin-left: 0%;
+  width: 50%;
+  position: relative;
+  float: left;
 }
 
 ::-webkit-file-upload-button{
@@ -84,12 +92,75 @@ hr{
   border-top: #0C8FA3 1px dashed;
 }
 
+.overflow{
+  overflow: auto;
+}
+
+/* ------------------------------------------------------------------------ */
+/* modals */
+
+.alertMiniModalRight {
+  width: 200px;
+  height: auto;
+  background-color: salmon;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  position: absolute;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  right: -15%;
+}
+
+.alertMiniModalRight p{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: white;
+}
+
+.alertMiniModalRight img{
+  width: 10px;
+  position: absolute;
+  right: -8px;
+  top: 2px;
+  width: 9px;
+  position: absolute;
+  right: -8px;
+  top: 5px;
+}
+
+.alertMiniModalRight img{
+  width: 10px;
+  position: absolute;
+  left: -8px;
+  top: 2px;
+  width: 9px;
+  position: absolute;
+  right: -20%;
+  top: 5px;
+  transform: rotate(180deg);
+}
+
+.statusIcon{
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  right: 30px;
+  margin-top: 6px;
+  border-radius: 5px;
+}
+
 /* -------------------------------------------------------------------- */
 
 /* Login Page Styling */
 .login{
   width: 100%;
   height: 100vh;
+}
+
+.login p {
+  margin: 0;
 }
 
 /* Login form */
@@ -116,9 +187,11 @@ hr{
   margin-bottom: 3%;
 }
 
-.loginForm, .registerForm p{
+.loginForm p{
   margin: 0;
   color: #9A9A9A;
+  text-decoration: underline #9A9A9A 1px solid;
+  cursor: pointer;
 }
 
 /* Login Img */
@@ -140,19 +213,19 @@ hr{
 }
 
 .registerForm{
-  width: 50%;
+  width: 100%;
   height: 100vh;
   float: left;
   text-align: center;
 }
 
 .registerLogo{
-  width: 30px;
-  height: 30px;
+  width: 1px;
+  height: 1px;
   padding: 10%;
   margin: 0 auto;
   margin-top: 3%;
-  background-image: url('assets/mainLogo.svg');
+  background-image: url('assets/registerLogo.svg');
   background-position: center;
   background-size: cover;
 }
@@ -161,20 +234,25 @@ hr{
   margin-top: 1%;
 }
 
+.registerForm a{
+  color: #9A9A9A;
+}
+
 .registerForm input{
   width: 64%;
   margin-bottom: 2%;
 }
 
-.registerForm #nameInputRegister, #surnameInputRegister, #ageInputRegister, #genderInputRegister{
+.registerForm #nameInputRegister, #surnameInputRegister, #ageInputRegister, #genderInputRegister, #cellInputRegister, #rankInputRegister{
   width: 29%;
 }
 
-.registerForm #genderInputRegister, #surnameInputRegister, #surnameInput, #genderInput{
+.registerForm #genderInputRegister, #surnameInputRegister, #surnameInput, #genderInput, #rankInputRegister{
   margin-left: 2%;
 }
 
 .registerImg{
+  margin-top: 3%;
   width: 30%;
   height: 60vh;
   padding: 8%;
@@ -182,6 +260,7 @@ hr{
   background-size: cover;
   background-position: center;
   float: left;
+  position: relative;
 }
 
 /* -------------------------------------------------------------------- */

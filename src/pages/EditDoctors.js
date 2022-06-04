@@ -3,7 +3,7 @@ import React from "react";
 function EditDoctors() {
     return (
         <div className="editDoctors">
-            <div className="doctorsList">
+            <div className="doctorsList overflow">
                 <h1>Doctors</h1>
                 <div className="doctorCard">
                     <div className="doctorProfile1"></div>
@@ -27,7 +27,7 @@ function EditDoctors() {
 
                 <div className="doctorCard">
                     <div className="doctorProfile3"></div>
-                    <h4>Dr. Ramaiah</h4>
+                    <h4>Dr. Nair</h4>
                     <p id="specialiation">Dermatologist</p>
                     <hr/>
                     <p><strong>Gender: </strong>Male</p>

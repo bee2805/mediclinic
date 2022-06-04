@@ -3,7 +3,7 @@ import React from "react";
 function EditPatients() {
     return (
         <div className="editPatients">
-            <div className="patientsList">
+            <div className="patientsList overflow">
                 <h1>Patients</h1>
                 <div className="patientCard">
                     <div className="patientProfile1"></div>

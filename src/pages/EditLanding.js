@@ -22,14 +22,14 @@ function EditLanding() {
                     <h2>Todays Appontments:</h2>
 
                     <div className='row_item'>
-                        <p><strong>Patient: </strong>Demi Muir</p>
+                        <p><strong>Patient: </strong>Kelly Pedro</p>
                         <p><strong>Doctor: </strong>Dr. Smith</p>
                         <p><strong>Time: </strong>08:30</p>
                         <p><strong>Room: </strong>A3</p>
                     </div>
 
                     <div className='row_item'>
-                        <p><strong>Patient: </strong>Kelly Pedro</p>
+                        <p><strong>Patient: </strong>Craig Sterley</p>
                         <p><strong>Doctor: </strong>Dr. Hamade</p>
                         <p><strong>Time: </strong>10:00</p>
                         <p><strong>Room: </strong>A1</p>
@@ -43,21 +43,21 @@ function EditLanding() {
                     </div>
 
                     <div className='row_item'>
-                        <p><strong>Patient: </strong>Jarid Muir</p>
-                        <p><strong>Doctor: </strong>Dr. Andrews</p>
+                        <p><strong>Patient: </strong>Ian Potgieter</p>
+                        <p><strong>Doctor: </strong>Dr. Ramaiah</p>
+                        <p><strong>Time: </strong>13:30</p>
+                        <p><strong>Room: </strong>A3</p>
+                    </div>
+
+                    <div className='row_item'>
+                        <p><strong>Patient: </strong>Demi Muir</p>
+                        <p><strong>Doctor: </strong>Dr. Shabalala</p>
                         <p><strong>Time: </strong>14:30</p>
                         <p><strong>Room: </strong>A3</p>
                     </div>
 
                     <div className='row_item'>
-                        <p><strong>Patient: </strong> Demi Muir</p>
-                        <p><strong>Doctor: </strong>Dr. Smith</p>
-                        <p><strong>Time: </strong>14:30</p>
-                        <p><strong>Room: </strong>A3</p>
-                    </div>
-
-                    <div className='row_item'>
-                        <p><strong>Patient: </strong> Demi Muir</p>
+                        <p><strong>Patient: </strong>Mila Muir</p>
                         <p><strong>Doctor: </strong>Dr. Smith</p>
                         <p><strong>Time: </strong>14:30</p>
                         <p><strong>Room: </strong>A3</p>
@@ -76,8 +76,8 @@ function EditLanding() {
                     <div className="patientDetails">
                         <div className="profilePicture"></div>
                         <div className="appointmentDetails">
-                            <p><strong>Patient: </strong> Demi Muir</p>
-                            <p><strong>Age: </strong>20 years old</p>
+                            <p><strong>Patient: </strong>Kelly Pedro</p>
+                            <p><strong>Age: </strong>21 years old</p>
                             <p><strong>Doctor: </strong>Dr. Smith</p>
                             <p><strong>Time: </strong>08:30 am</p>
                             <p><strong>Room: </strong>A3</p>
