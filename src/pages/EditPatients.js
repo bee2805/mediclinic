@@ -1,8 +1,10 @@
 import React from "react";
+import SideNav from "./SideNav";
 
 function EditPatients() {
     return (
         <div className="editPatients">
+            <SideNav/>
             <div className="patientsList overflow">
                 <h1>Patients</h1>
                 <div className="patientCard">

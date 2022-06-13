@@ -34,6 +34,14 @@ input{
   border-radius: 20px;
 }
 
+select{
+  border: none;
+  background-color: #f5f5f5;
+  outline: none;
+  padding: 15px;
+  border-radius: 20px;
+}
+
 input[type="file"]{
   margin: 0;
   background-color: transparent;
@@ -263,20 +271,11 @@ hr{
   position: relative;
 }
 
-/* -------------------------------------------------------------------- */
-/* DASHBOARD */
-.dashboard{
-  width: 100%;
-  height: 100vh;
-}
-
-/* -------------------------------------------------------------------- */
-
 /* navBar */
 .sideNav{
   width: 5%;
   padding: 1%;
-  height: 96.2vh;
+  height: 96.4vh;
   background-color: #0C8FA3;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -345,28 +344,33 @@ hr{
 /* Landing Page */
 
 /* Left-content */
-.leftContent, .rightContent{
+.leftContent{
   width: 50%;
+  height: 100vh;
+  float: left;
+  margin-left: 7%;
+}
+
+.rightContent{
+  width: 43%;
   height: 100vh;
   float: left;
 }
 
 .editLanding{
-  width: 93%;
+  width: 100%;
   height: 100vh;
   float: left;
   margin: 0;
   padding: 0;
-  margin-left: 7%;
 }
 
 .editPatients, .editDoctors{
-  width: 93%;
+  width: 100%;
   height: 100vh;
   float: right;
   margin: 0;
   padding: 0;
-  margin-left: 7%;
 }
 
 /* Intro */
@@ -443,6 +447,7 @@ hr{
   background-color: #DBEFEE;
   margin-left: 4%;
   border-radius: 20px;
+  margin-bottom: 5%;
 }
 
 .profilePicture{
@@ -464,6 +469,59 @@ hr{
   margin-left: 5%;
 }
 
+.appointments p{
+  color: #0C8FA3;
+}
+
+.rightContent form{
+  text-align: center;
+  width: 87%;
+  padding: 2%;
+  margin-left: 4%;
+}
+
+.rightContent h2{
+  text-align: left;
+  margin-left: 4%;
+}
+
+.rightContent .button{
+  width: 33%;
+}
+
+.rightContent hr{
+  margin-top:8%;
+  margin-bottom: 3.5%;
+  text-align: center;
+  width: 90%;
+}
+
+#date, #time{
+  width: 43%;
+}
+
+#drRoom, #dr{
+  width: 48.5%;
+}
+
+#date, #time{
+  cursor: text;
+}
+
+#medicalAid, #name{
+  width: 94%;
+  margin-bottom: 2%;
+}
+
+#name, #date, #dr{
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
+
+.addAppointment h2{
+  margin-top: 0;
+}
+
 /* -------------------------------------------------------------------------------------- */
 /* Doctors Page */
 .editDoctors h1{
@@ -477,8 +535,9 @@ hr{
 }
 
 .doctorsList, .patientsList{
-  width: 60%;
+  width: 53%;
   height: 100%;
+  margin-left: 7%;
   float: left;
 }
 

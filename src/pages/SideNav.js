@@ -2,7 +2,7 @@ function SideNav() {
     return (
         <div className="sideNav">
             <div className="navLogo"></div>
-            <a href="/">
+            <a href="/EditLanding">
                 <div className="home"></div>
                 <p>Home</p>
             </a>
@@ -15,8 +15,10 @@ function SideNav() {
                 <p>Patients</p>
             </a>
 
-            <div className="logout"></div>
-            <p>Log Out</p>
+            <a href="/">
+                <div className="logout"></div>
+                <p>Log Out</p>
+            </a>
         </div> 
     );
 }

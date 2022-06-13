@@ -7,19 +7,17 @@ import EditDoctors from "./pages/EditDoctors";
 import EditPatients from "./pages/EditPatients";
 // React Routing
 import {Routes, Route} from 'react-router';
-import SideNav from "./pages/SideNav";
 
 
 function App() {
   return (
     <div className="App">
-      {/* <SideNav/> */}
       <Routes>
         <Route path='/' element={<Login/>}/> 
         <Route path='/Register.js' element={<Register/>}/>
-        {/* <Route path='/' element={<EditLanding/>}/>
+        <Route path='/EditLanding' element={<EditLanding/>}/>
         <Route path='/EditDoctors' element={<EditDoctors/>}/>
-        <Route path='/EditPatients' element={<EditPatients/>}/> */}
+        <Route path='/EditPatients' element={<EditPatients/>}/>
       </Routes>
     </div>
   );

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import {useNavigate} from 'react-router-dom';
-import MiniModalLeft from "../components/MiniModalLeft";
 import MiniModalRight from "../components/MiniModalRight";
 import axios from 'axios';
 import Valid from "../assets/icons/Valid.svg";
@@ -134,7 +133,7 @@ function Register() {
             } else if(res.data === "Not Available"){
                 setEmailIcon(invalid);
                 setEmailAvail(<MiniModalRight message="You cannot use this Email."/>);
-            } else if(res.data ===''){
+            } else if(res.data === ''){
                 setEmailIcon();
                 setEmailAvail();
                 setEmailError();
@@ -262,9 +261,6 @@ function Register() {
                     <input name="gender" type="text" id="genderInputRegister" placeholder="Gender" onChange={genderVal}/>
                     {emailError}
                     {emailAvail}
-                    {/* <div className="statusIcon">
-                        <img src={emailIcon} alt="email icon"/>
-                    </div> */}
                     <input name="email" type="text" id="emailInputRegister" placeholder="Email Address" onBlur={authenticateEmail} onChange={emailVal}/>
                     {contactError}
                     <input name="cellNo" type="number" id="cellInputRegister" placeholder="Celllphone Number" onChange={contactVal}/>
