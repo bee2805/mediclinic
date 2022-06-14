@@ -71,7 +71,7 @@ function Login() {
                     <input type="password" className="password" placeholder="Password" onChange={passwordVal}/>
                     <a href="/EditLanding" onClick={handleSubmit}><div className='button'>Login!</div></a>
                     <a href=""><p>Forgot Passowrd.</p></a>
-                    <a href="/Register.js"><p>Don't have an account? Sign up!</p></a>
+                    <a href="/Register"><p>Don't have an account? Sign up!</p></a>
                 </div>
                 <div className="loginImg"></div>
             </form>

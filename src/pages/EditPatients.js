@@ -1,7 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import {useNavigate} from 'react-router-dom';
 import SideNav from "./SideNav";
 
 function EditPatients() {
+
+    const navigate = useNavigate();
+
+    const [userId, setUserId] = useState({
+        activeUser: sessionStorage.getItem('activeUser')
+    });
+
+    // use effect is supposed to redirect if session is not set
+    useEffect(() =>{
+        const userSession = sessionStorage.getItem('activeUser');
+        console.log(userSession);
+        if(userSession === '' || userSession === null){
+            navigate('/');
+        }
+    },[]);
+
     return (
         <div className="editPatients">
             <SideNav/>

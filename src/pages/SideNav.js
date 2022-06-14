@@ -1,4 +1,25 @@
+import React, { useEffect} from "react";
+import {useNavigate} from 'react-router-dom';
+
 function SideNav() {
+
+    const activeUser = sessionStorage.getItem('activeUser');
+
+    const navigate = useNavigate();
+
+    useEffect(() =>{
+        const userSession = sessionStorage.getItem('activeUser');
+        console.log(userSession);
+        if(userSession === '' || userSession === null){
+            navigate('/');
+        }
+    },[]);
+
+    const setLogout = () => {
+        sessionStorage.clear();
+        navigate('/');
+    }
+
     return (
         <div className="sideNav">
             <div className="navLogo"></div>
@@ -15,10 +36,10 @@ function SideNav() {
                 <p>Patients</p>
             </a>
 
-            <a href="/">
+            <div className="logOut" onClick={setLogout}>
                 <div className="logout"></div>
                 <p>Log Out</p>
-            </a>
+            </div>
         </div> 
     );
 }
