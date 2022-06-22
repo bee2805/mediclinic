@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
-    font-family: 'Open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -44,6 +44,7 @@ select{
 
 input[type="file"]{
   margin: 0;
+  padding: 0;
   background-color: transparent;
   font-family: 'Open Sans', sans-serif;
   color: transparent;
@@ -51,9 +52,32 @@ input[type="file"]{
   background-color: transparent;
 }
 
-label{
+.registerForm .imgArea{
+  width: 100%;
+  height: 7vh;
+}
+
+.registerForm .profile_img{
+  width: 80px;
+  height: 80px;
+  background-color: #10AFBA;
   float: left;
-  margin-top: 2%;
+  margin-right: 3%;
+  border-radius: 50%;
+  margin-left: 16%;
+}
+
+.imgArea p{
+  padding-top: 1%;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #9A9A9A;
+  text-align: left;
+}
+
+.imgArea{
+  width: 100%;
+  height: 10vh;
 }
 
 .register form{
@@ -64,6 +88,7 @@ label{
 }
 
 ::-webkit-file-upload-button{
+  width: 50%;
   font-weight: bold;
   border: none;
   background-color: transparent;
@@ -72,7 +97,39 @@ label{
   border-radius: 20px;
   color: white;
   font-family: 'Open Sans', sans-serif;
+  background-color: #10AFBA;
+  margin-bottom: 10%;
+  margin-top: 2%;
+  cursor: pointer;
+}
+
+.registerForm ::-webkit-file-upload-button{
+  width: 25%;
+  font-weight: bold;
+  border: none;
+  background-color: transparent;
+  outline: none;
+  padding: 3%;
+  border-radius: 20px;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #10AFBA;
+  margin-bottom: 2%;
+  margin-top: 1%;
+  cursor: pointer;
+}
+
+::-webkit-file-upload-button:hover{
   background-color: #0C8FA3;
+}
+
+.profile_img{
+  width: 80px;
+  height: 80px;
+  background-color: #10AFBA;
+  float: left;
+  margin-right: 4%;
+  border-radius: 50%;
 }
 
 .button{
@@ -115,6 +172,7 @@ hr{
   border-radius: 5px;
   text-align: center;
   position: absolute;
+  z-index: 999;
   padding-top: 1%;
   padding-bottom: 1%;
   right: -15%;
@@ -238,6 +296,12 @@ hr{
   background-size: cover;
 }
 
+.profile_img img{
+  width: 100%;
+  border-radius: 50%;
+  border: 5px solid #10AFBA;
+}
+
 .registerForm h1{
   margin-top: 1%;
 }
@@ -248,7 +312,7 @@ hr{
 
 .registerForm input{
   width: 64%;
-  margin-bottom: 2%;
+  margin-bottom: 1.5%;
 }
 
 .registerForm #nameInputRegister, #surnameInputRegister, #ageInputRegister, #genderInputRegister, #cellInputRegister, #rankInputRegister{
@@ -351,14 +415,14 @@ hr{
 
 /* Left-content */
 .leftContent{
-  width: 50%;
+  width: 55%;
   height: 100vh;
   float: left;
   margin-left: 7%;
 }
 
 .rightContent{
-  width: 43%;
+  width: 38%;
   height: 100vh;
   float: left;
 }
@@ -472,7 +536,7 @@ hr{
 
 .appointmentDetails{
   float: left;
-  margin-left: 5%;
+  margin-left: 3%;
 }
 
 .appointments p{
@@ -503,15 +567,12 @@ hr{
 }
 
 #date, #time{
-  width: 43%;
+  width: 42.6%;
+  cursor: text;
 }
 
 #drRoom, #dr{
   width: 48.5%;
-}
-
-#date, #time{
-  cursor: text;
 }
 
 #medicalAid, #name{
@@ -526,6 +587,87 @@ hr{
 
 .addAppointment h2{
   margin-top: 0;
+}
+
+.editAppointment{
+  padding: 2%;
+  width: 40%;
+  background-color: #DBEFEE;
+  border-radius: 20px;
+  position: absolute;
+  margin-left: 6%;
+  margin-top: -10vh;
+  box-shadow: 3px 5px 29px -4px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 3px 5px 29px -4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 3px 5px 29px -4px rgba(0,0,0,0.75);
+}
+
+.editAppointment .button{
+  width: 40%;
+}
+
+.editAppointment input{
+  background-color: white;
+}
+
+.close{
+  width: 30px;
+  height: 30px;
+  float: right;
+  background-image: url('assets/icons/delete.svg');
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.editAppointment select{
+  background-color: white;
+}
+
+.editAppointment h2{
+  padding: 0;
+  margin-top: 0;
+  text-align: center;
+}
+
+.edit{
+  width: 30px;
+  height: 30px;
+  background-image: url('assets/icons/edit.svg');
+  background-size: cover;
+  background-position: center;
+  float: right; 
+  margin-top: -0.5%;
+  cursor: pointer;
+}
+
+.delete{
+  width: 30px;
+  height: 30px;
+  background-image: url('assets/icons/delete.svg');
+  background-size: cover;
+  background-position: center;
+  float: right; 
+  margin-top: -0.5%;
+  cursor: pointer;
+  margin-left: 1%;
+}
+
+.editAppointment #name{
+  width: 42%;
+}
+
+.editAppointment #time{
+  width: 42%;
+}
+
+.editAppointment #drRoom{
+  width: 47%; 
+  margin-right: 2%;
+}
+
+.editAppointment #dr{
+  width: 47.6%; 
 }
 
 /* -------------------------------------------------------------------------------------- */
@@ -678,7 +820,7 @@ hr{
 .doctorImg{
   margin: 0 auto;
   margin-top: 4%;
-  width: 300px;
+  width: 350px;
   height: 250px;
   background-image: url('assets/doctorImg.svg');
   background-size: cover;
@@ -689,12 +831,12 @@ form{
   margin-left: 2%;
 }
 
-.addDoctor #nameInput, #surnameInput, #ageInput, #genderInput{
+.addDoctor #nameInput, #surnameInput, #ageInput, #genderInput, #emailInput, #cellInput{
   width: 40%;
   margin-bottom: 2%;
 }
 
-.addDoctor #cellInput, #emailInput, #password{
+.addDoctor #password{
   width: 87.5%;
   margin-bottom: 2%;
 }
@@ -704,7 +846,7 @@ form{
   margin-bottom: 2%;
 }
 
-.addDoctor #specialization{
+.addDoctor #specialization, #cellInput{
   margin-right: 2%;
 }
 
@@ -838,9 +980,32 @@ form{
 .patientImg{
   margin: 0 auto;
   margin-top: 4%;
-  width: 80%;
-  height: 300px;
+  width: 69%;
+  height: 230px;
   background-image: url('assets/patientImg.jpg');
   background-size: cover;
   background-position: center;
+}
+
+.editPatient, .editDoctor{
+  width: 30px;
+  height: 30px;
+  background-image: url('assets/icons/edit.svg');
+  background-size: cover;
+  background-position: center;
+  float: left; 
+  margin-top: -0.5%;
+  cursor: pointer;
+}
+
+.deletePatient, .deleteDoctor{
+  width: 30px;
+  height: 30px;
+  background-image: url('assets/icons/delete.svg');
+  background-size: cover;
+  background-position: center;
+  float: right; 
+  margin-top: -0.5%;
+  cursor: pointer;
+  margin-left: 1%;
 }

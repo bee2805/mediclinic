@@ -4,6 +4,7 @@ import axios from "axios";
 import {useNavigate} from 'react-router-dom';
 import Appointments from "../components/Appointment";
 import { render } from "@testing-library/react";
+import EditAppointment from "../components/EditAppointment";
 
 function EditLanding() {
 
@@ -16,7 +17,6 @@ function EditLanding() {
     // use effect is supposed to redirect if session is not set
     useEffect(() =>{
         const userSession = sessionStorage.getItem('activeUser');
-        console.log(userSession);
         if(userSession === '' || userSession === null){
             navigate('/');
         }
@@ -97,7 +97,7 @@ function EditLanding() {
         axios.post('http://localhost:8888/mediclinicApi/readAppointments.php', userId)
         .then((res) => {
             let data = res.data;
-            let renderAppointments = data.map((item) => <Appointments patientName={item.patientName} doctorName={item.doctorName} time={item.time} room={item.room}/>);
+            let renderAppointments = data.map((item) => <Appointments key={item.id} rerender={setRenderAppointments} uniqueId={item.id} patientName={item.patientName} doctorName={item.doctorName} time={item.time} room={item.room}/>);
 
             setAppointments(renderAppointments);
             setRenderAppointments(false);
@@ -130,6 +130,8 @@ function EditLanding() {
             {/* Left Content */}
             <div className="leftContent overflow">
 
+                {/* <EditAppointment/> */}
+
                 {/* Intro */}
                 <div className="intro">
                     <div className="landingImg"></div>
@@ -146,7 +148,7 @@ function EditLanding() {
                     <h2>Todays Appontments:</h2>
                     {appointments}
                     {/* Edit Appointmetns */}
-                    <div className="button">Edit Appointments</div>
+                    {/* <div className="button">Edit Appointments</div> */}
                 </div> {/* Appointments */}
 
 

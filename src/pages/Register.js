@@ -11,6 +11,7 @@ function Register() {
     const navigate = useNavigate();
 
     const [inputs, setInputs] = useState({
+        image: '',
         name: '',
         surname: '',
         age: '',
@@ -37,6 +38,23 @@ function Register() {
 
     // get Inputs
     // Validation
+
+    const imageVal = (e) => {           
+        let file = e.target.files[0];
+        let reader = new FileReader();
+
+        reader.onloadend = function() {
+            console.log(reader.result);
+            let imgFile = reader.result;
+
+            setInputs({...inputs, image: imgFile});
+
+            let image = new Image();
+            image.src = reader.result;
+            document.getElementById('profileImg').appendChild(image);
+        }
+        reader.readAsDataURL(file);
+    }
 
     // name
     const nameVal = (e) => {
@@ -250,6 +268,12 @@ function Register() {
                 <form>
                     <div className="registerLogo"></div>
                     <h1>Register Now!</h1>
+
+                    <div className="imgArea">
+                        <div className="profile_img" id="profileImg"></div>
+                        <p>Upload a profile image</p>
+                        <input name="imageUrl" className="imgInput" type="file" onChange={imageVal}/>
+                    </div>
                     
                     {nameError}
                     <input name="name" type="text" id="nameInputRegister" placeholder="Name" onChange={nameVal}/>

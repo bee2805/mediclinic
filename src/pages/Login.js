@@ -21,7 +21,7 @@ function Login() {
         setInputs({... inputs, email: value});
 
         // validate if the field is empty.
-        if(inputs.email !== ''){setEmailError();}
+        if(inputs.email !== ''){setEmailError(<MiniModalRight message="You must provide an email address."/>);}
     }
 
     const passwordVal = (e) => {
@@ -67,8 +67,8 @@ function Login() {
                 <div className="loginForm">
                     <div className="loginLogo"></div>
                     <h1>Welcome Back!</h1>
-                    <input type="text" className="email" placeholder="Email" onChange={emailVal}/>
-                    <input type="password" className="password" placeholder="Password" onChange={passwordVal}/>
+                    <input name="email" type="text" className="email" placeholder="Email" onChange={emailVal}/>
+                    <input name="password" type="password" className="password" placeholder="Password" onChange={passwordVal}/>
                     <a href="/EditLanding" onClick={handleSubmit}><div className='button'>Login!</div></a>
                     <a href=""><p>Forgot Passowrd.</p></a>
                     <a href="/Register"><p>Don't have an account? Sign up!</p></a>

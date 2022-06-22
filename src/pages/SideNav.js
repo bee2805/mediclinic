@@ -9,11 +9,10 @@ function SideNav() {
 
     useEffect(() =>{
         const userSession = sessionStorage.getItem('activeUser');
-        console.log(userSession);
         if(userSession === '' || userSession === null){
             navigate('/');
         }
-    },[]);
+    });
 
     const setLogout = () => {
         sessionStorage.clear();
