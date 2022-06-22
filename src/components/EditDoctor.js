@@ -2,7 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const EditPatient = (props) => {
+const EditDoctor = (props) => {
 
     return(
         <div className="editAppointment">
@@ -23,4 +23,4 @@ const EditPatient = (props) => {
     )
 }
 
-export default EditPatient;
+export default EditDoctor;
