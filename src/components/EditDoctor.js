@@ -4,20 +4,105 @@ import axios from "axios";
 
 const EditDoctor = (props) => {
 
+    const [updatedDoctor, setUpdatedDoctor] = useState({
+        id: props.id,
+        newName: props.origionalName,
+        newSurname: props.origionalSurname,
+        newAge: props.origionalAge,
+        newGender: props.origionalGender,
+        newCellNo: props.origionalCell,
+        newEmail: props.origionalEmail,
+        newSpecialization: props.origionalSpecialization,
+        newRoom: props.origionalRoom
+    });
+
+    const closeModal = () => {
+        props.rerender();
+    }
+
+    useEffect(() => {
+        document.getElementById('name').innerHTML = props.origionalName;
+        document.getElementById('surname').innerHTML = props.origionalSurname;
+        document.getElementById('age').innerHTML = props.origionalAge;
+        document.getElementById('gender').innerHTML = props.origionalGender;
+        document.getElementById('cellNo').innerHTML = props.origionalCell;
+        document.getElementById('email').innerHTML = props.origionalEmail;
+        document.getElementById('specialization').innerHTML = props.origionalSpecialization;
+        document.getElementById('room').innerHTML = props.origionalRoom;
+    },[]);
+
+    const nameChange = (e) => {
+        let value = e.target.value;
+        setUpdatedDoctor({...updatedDoctor, newName:value});
+        console.log(updatedDoctor);
+    }
+
+    const surnameChange = (e) => {
+        let value = e.target.value;
+        setUpdatedDoctor({...updatedDoctor, newSurname:value});
+        console.log(updatedDoctor);
+    }
+
+    const ageChange = (e) => {
+        let value = e.target.value;
+        setUpdatedDoctor({...updatedDoctor, newAge:value});
+        console.log(updatedDoctor);
+    }
+
+    const genderChange = (e) => {
+        let value = e.target.value;
+        setUpdatedDoctor({...updatedDoctor, newGender:value});
+        console.log(updatedDoctor);
+    }
+
+    const cellChange = (e) => {
+        let value = e.target.value;
+        setUpdatedDoctor({...updatedDoctor, newCellNo:value});
+        console.log(updatedDoctor);
+    }
+
+    const emailChange = (e) => {
+        let value = e.target.value;
+        setUpdatedDoctor({...updatedDoctor, newEmail:value});
+        console.log(updatedDoctor);
+    }
+
+    const specializationChange = (e) => {
+        let value = e.target.value;
+        setUpdatedDoctor({...updatedDoctor, newSpecialization:value});
+        console.log(updatedDoctor);
+    }
+
+    const roomChange = (e) => {
+        let value = e.target.value;
+        setUpdatedDoctor({...updatedDoctor, newGender:value});
+        console.log(updatedDoctor);
+    }
+
+    const updateDoctor = () => {
+        axios.post('http://localhost:8888/mediclinicApi/updateDoctor.php', updatedDoctor)
+        .then((res) => {
+            let data = res.data;
+            console.log(data);
+            props.upRender(true);
+            props.rerender(); 
+        });
+    }
+
     return(
-        <div className="editAppointment">
+        <div className="editDoctorProfile">
             <form>
-                <div className="close"></div>
-                <h2>Edit Appointment</h2>
-                <input name="name" id="name" placeholder="Name and Surname"/>
-                <input name="time" type="time" id="time"/>
-                <select name="room" id="drRoom">
-                    <option>Select Room</option>
-                </select>
-                <select name="doc" id="dr">
-                    <option id="dr">Select Doctor</option>
-                </select>
-                <div className='button'>Edit this appointment</div>
+                <div className="close" onClick={closeModal}></div>
+                <h2>Edit Doctor Details</h2>
+                <input name="name" id="name" placeholder="Name" onChange={nameChange}/>
+                <input name="surname" id="surname" placeholder="Surname" onChange={surnameChange}/>
+                <input name="age" id="age" placeholder="Age" onChange={ageChange}/>
+                <input name="gender" id="gender" placeholder="Gender" onChange={genderChange}/>
+                <input name="cellNo" id="cellNo" placeholder="Cellphone Number" onChange={cellChange}/>
+                <input name="email" id="email" placeholder="Email Address" onChange={emailChange}/>
+                <input name="specialization" id="specialization" placeholder="Specialization" onChange={specializationChange}/>
+                <input name="room" id="room" placeholder="Room" onChange={roomChange}/>
+                <div className='button' onClick={updateDoctor}>Edit this doctor</div>
             </form>
         </div>
     )

@@ -115,7 +115,7 @@ function EditDoctors() {
         axios.post('http://localhost:8888/mediclinicApi/readDoctors.php', userId)
         .then((res) => {
             let data = res.data;
-            let renderDoctors = data.map((item) => <DoctorCard key={item.id} rerender={setRenderDoctors} uniqueId={item.id} surname={item.surname} specialization={item.specialization} gender={item.gender} age={item.age} cellNo={item.cellNo}/>);
+            let renderDoctors = data.map((item) => <DoctorCard key={item.id} rerender={setRenderDoctors} uniqueId={item.id} name={item.name} surname={item.surname} specialization={item.specialization} gender={item.gender} age={item.age} cellNo={item.cellNo}/>);
             console.log(res);
             setDoctors(renderDoctors);
             setRenderDoctors(false);

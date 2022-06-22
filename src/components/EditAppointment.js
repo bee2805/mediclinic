@@ -26,25 +26,21 @@ const EditAppointment = (props) => {
     const nameChange = (e) => {
         let value = e.target.value;
         setUpdatedAppointment({...updatedAppointment, newPatient:value});
-        console.log(updatedAppointment);
     }
 
     const doctorChange = (e) => {
         let value = e.target.value;
         setUpdatedAppointment({...updatedAppointment, newDoctor:value});
-        console.log(updatedAppointment);
     }
 
     const timeChange = (e) => {
         let value = e.target.value;
         setUpdatedAppointment({...updatedAppointment, newTime:value});
-        console.log(updatedAppointment);
     }
 
     const roomChange = (e) => {
         let value = e.target.value;
         setUpdatedAppointment({...updatedAppointment, newRoom:value});
-        console.log(updatedAppointment);
     }
 
     const updateAppointment = () => {

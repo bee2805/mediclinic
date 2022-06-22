@@ -854,6 +854,44 @@ form{
   width: 150px;
 }
 
+.editDoctorProfile{
+  padding: 2%;
+  width: 40%;
+  background-color: #DBEFEE;
+  border-radius: 20px;
+  position: absolute;
+  margin-left: 6%;
+  margin-top: 8%;
+  box-shadow: 3px 5px 29px -4px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 3px 5px 29px -4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 3px 5px 29px -4px rgba(0,0,0,0.75);
+}
+
+.editDoctorProfile .button{
+  width: 40%;
+}
+
+.editDoctorProfile input{
+  background-color: white;
+}
+
+.editDoctorProfile select{
+  background-color: white;
+}
+
+.editDoctorProfile #name, #surname, #age, #gender, #cellNo, #email, #specialization, #room{
+  width: 42%;
+}
+
+.editDoctorProfile #age, #cellNo, #specialization{
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
+
+.editDoctorProfile h2{
+  margin-top: 0;
+}
+
 /* --------------------------------------------------------------------- */
 
 .patientProfile1{
@@ -1008,4 +1046,47 @@ form{
   margin-top: -0.5%;
   cursor: pointer;
   margin-left: 1%;
+}
+
+.editPatientProfile{
+  padding: 2%;
+  width: 40%;
+  background-color: #DBEFEE;
+  border-radius: 20px;
+  position: absolute;
+  margin-left: 6%;
+  margin-top: 8%;
+  box-shadow: 3px 5px 29px -4px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 3px 5px 29px -4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 3px 5px 29px -4px rgba(0,0,0,0.75);
+}
+
+.editPatientProfile .button{
+  width: 40%;
+}
+
+.editPatientProfile input{
+  background-color: white;
+}
+
+.editPatientProfile select{
+  background-color: white;
+}
+
+.editPatientProfile #name, #surname, #age, #gender, #cellNo, #email{
+  width: 42%;
+}
+
+.editPatientProfile #medicalAidNo{
+  width: 91%;
+  margin-bottom: 2%;
+}
+
+.editPatientProfile #age, #cellNo{
+  margin-right: 2%;
+  margin-bottom: 2%;
+}
+
+.editPatientProfile h2{
+  margin-top: 0;
 }
