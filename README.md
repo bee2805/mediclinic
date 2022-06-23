@@ -152,7 +152,7 @@ The `Conceptual Process` is the set of actions, activities and research that was
 
 <h2>Register Page</h2>
 
-![image7](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/Wireframes/RegisterPageWireframe.jpg)
+![image7](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/Wireframes/RegisterFormWireframe.jpg)
 
 <h2>Appointments Page</h2>
 
@@ -162,7 +162,7 @@ The `Conceptual Process` is the set of actions, activities and research that was
 
 ![image9](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/Wireframes/DoctorsWireframe.jpg)
 
-<h2>Doctors Page</h2>
+<h2>Patients Page</h2>
 
 ![image10](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/Wireframes/PatientsWireframe.jpg)
 
