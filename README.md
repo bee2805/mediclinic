@@ -148,7 +148,7 @@ The `Conceptual Process` is the set of actions, activities and research that was
 
 ### Wireframes
 
-![image7](https://raw.githubusercontent.com/bee2805/mediclinic/main/src/assets/ideation/wireframes/LoginPageWireframe.jpg)
+![image7](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/Wireframes/LoginPageWireframe.jpg)
 
 ### Custom UI
 
