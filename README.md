@@ -64,7 +64,7 @@
 <!--PROJECT DESCRIPTION-->
 ## About the Project
 <!-- header image of project -->
-![image1][image1]
+![image1](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/DisplayImg.jpg)
 
 ### Project Description
 
