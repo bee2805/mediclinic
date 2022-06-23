@@ -17,7 +17,7 @@
 <p align="center">
 
   <a href="https://github.com/bee2805/mediclinic">
-    <img src="src/assets/mainLogo.svg" alt="Logo" width="200" height="140">
+    <img src="src/assets/mainLogo.svg" alt="Logo" width="500" height="500">
   </a>
   
   <h3 align="center">MediClinic</h3>
