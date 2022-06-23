@@ -17,14 +17,13 @@
 <p align="center">
 
   <a href="https://github.com/bee2805/mediclinic">
-    <img src="src/assets/mainLogo.svg" alt="Logo" width="140" height="140">
+    <img src="src/assets/mainLogo.svg" alt="Logo" width="200" height="140">
   </a>
   
   <h3 align="center">MediClinic</h3>
 
   <p align="center">
-    A react project using the Space X Api to demonstrate data visualization using charts js  <br>
-    <i>This However is a template file for DV200 Students!</i> 
+    A react project where I created a web application used by a receptionist to manage a medical practice using php, mySQL and React. <br>
     
    <br />
    <br />
@@ -74,8 +73,8 @@ A nice introduction to this amazing project of mine.
 ### Built With
 
 * [React](https://reactjs.org/)
-* [Technology Name](path/to/technology/website)
-* [Technology Name](path/to/technology/website)
+* [php](https://www.php.net/)
+* [mySQL](https://www.mysql.com/)
 
 <!-- GETTING STARTED -->
 <!-- Make sure to add appropriate information about what prerequesite technologies the user would need and also the steps to install your project on their own mashines -->
@@ -118,20 +117,19 @@ Run the following in the command-line to install all the required dependencies:
 <!-- note how you can use your gitHub link. Just make a path to your assets folder -->
 ![image2](https://raw.githubusercontent.com/bee2805/mediclinic/main/src/assets/mockup.jpg)
 
-### All The Latest Space X Data! 
+### Manage Appointments! 
 
-Usding the Space X API, we have collected and collated all the most relevant Space X data into once seemless react experience!
+Using CRUD operations appointments can be created, read, updated and deleted from the database. The user is able to easily edit, delete and add new appointments. The user will also be able to see the upcoming appointments for the week. 
 
 ![image3][image3]
-### Feature 2
+### Manage doctor profiles
 
-Description of Feature
+The user will also be able to add, edit and delete a doctor profile. The doctor profile holds important and personal information about the doctors, such as their name, specialization, age and gender. The user will also be able to see a list of doctor profile cards where they will easily be able to edit and delete the doctors from.
 
 ![image4][image4]
-### Feature 3
+### Manage patient profiles
 
-Description of Feature
-
+Much like the doctors page, the user will also be able to add, edit and delete a patient profile. The user will also be able to see a list of doctor profile cards presenting important information that can be edited or deleted.
 ![image5][image5]
 
 
@@ -150,7 +148,7 @@ The `Conceptual Process` is the set of actions, activities and research that was
 
 ### Wireframes
 
-![image7][image7]
+![image7](https://raw.githubusercontent.com/bee2805/mediclinic/main/src/assets/ideation/wireframes/LoginPageWireframe.jpg)
 
 ### Custom UI
 
