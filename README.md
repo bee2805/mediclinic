@@ -142,7 +142,7 @@ The `Conceptual Process` is the set of actions, activities and research that was
 
 ### Ideation
 
-![image5][image5]
+![image5](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/IdeationPhase.jpg)
 <br>
 
 ### Wireframes
