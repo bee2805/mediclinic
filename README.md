@@ -146,29 +146,25 @@ The `Conceptual Process` is the set of actions, activities and research that was
 <br>
 
 ### Wireframes
-<h2>Login Page</h2>
+<h4>Login Page</h4>
 
 ![image6](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/Wireframes/LoginPageWireframe.jpg)
 
-<h2>Register Page</h2>
+<h4>Register Page</h4>
 
 ![image7](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/Wireframes/RegisterFormWireframe.jpg)
 
-<h2>Appointments Page</h2>
+<h4>Appointments Page</h4>
 
 ![image8](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/Wireframes/LandingPageWireframe.jpg)
 
-<h2>Doctors Page</h2>
+<h4>Doctors Page</h4>
 
 ![image9](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/Wireframes/DoctorsWireframe.jpg)
 
-<h2>Patients Page</h2>
+<h4>Patients Page</h4>
 
 ![image10](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/Wireframes/PatientsWireframe.jpg)
-
-### Custom UI
-
-![image7](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/Wireframes/LoginPageWireframe.jpg)
 
 <!-- DEVELOPMENT PROCESS -->
 ## Development Process
@@ -187,13 +183,15 @@ The `Development Process` is the technical implementations and functionality don
 
 #### Highlights
 <!-- stipulated the highlight you experienced with the project -->
-* What was good about this project, what did you learn.
-* What aspects did you enjoy.
+Overall, I really enjoyed this term and found the work to be quite interesting
+* using props to dynamically show the input from the database.
+* use CRUD operations to aid the management of the data.
+* Building and stylling the project.
 
 #### Challenges
 <!-- stipulated the challenges you faced with the project and why you think you faced it or how you think you'll solve it (if not solved) -->
-* Bugs.
-* Bugs.
+* Type error: Data.map is not a function - I realized the work around this was to make sure the path to my database was correct, as well as ensuring there was data in my database. I found that if the table in the database was empty, I would get this error.
+* There was a cors error because my front end was running on port 3000 and the server was running on port 8888, which caused a conflict. This was in class with the assistance of Mike, my lecturer.
 
 
 #### Above And Beyond
@@ -206,8 +204,8 @@ What aspects of this final build contribute to the `Above And Beyond` Component 
 ### Future Implementation
 <!-- stipulate functionality and improvements that can be implemented in the future. -->
 
-* Future 1.
-* Future 2.
+* Add form validation on my “add appointment”, “add doctor”, “add patient” and edit forms.
+* I think the implementation of a calendar would have been a nice addition to the project for adding appointments. I aim to keep working on this project in the future and implement this feature.
 
 <!-- MOCKUPS -->
 ## Final Outcome
@@ -231,7 +229,7 @@ See the [open issues](https://github.com/bee2805/mediclinic/issues) for a list o
 <!-- AUTHORS -->
 ## Authors
 
-* **Your Name & Surname** - [MikeMaynard14](https://github.com/MikeMaynard14)
+* **Bronwyn Potgieter** - [bee2805](https://github.com/bee2805)
 
 <!-- LICENSE -->
 ## License
@@ -241,7 +239,7 @@ Distributed under the MIT License. See `LICENSE` for more information.\
 <!-- LICENSE -->
 ## Contact
 
-* **Your Name & Surname** - [email@address](mailto:email@address) - [@instagram_handle](https://www.instagram.com/instagram_handle/) 
+* **Bronwyn Potgieter** - [200089@virtualwindow.co.za](mailto:200089@virtualwindow.co.za) - [@bronns_designs](https://www.instagram.com/bronns_designs/) 
 * **Project Link** - https://github.com/bee2805/mediclinic
 
 <!-- ACKNOWLEDGEMENTS -->
