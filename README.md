@@ -144,15 +144,31 @@ The `Conceptual Process` is the set of actions, activities and research that was
 
 ![image5][image5]
 <br>
-![image6][image6]
 
 ### Wireframes
+<h2>Login Page</h2>
 
-![image7](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/Wireframes/LoginPageWireframe.jpg)
+![image6](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/Wireframes/LoginPageWireframe.jpg)
+
+<h2>Register Page</h2>
+
+![image7](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/Wireframes/RegisterPageWireframe.jpg)
+
+<h2>Appointments Page</h2>
+
+![image8](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/Wireframes/LandingPageWireframe.jpg)
+
+<h2>Doctors Page</h2>
+
+![image9](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/Wireframes/DoctorsWireframe.jpg)
+
+<h2>Doctors Page</h2>
+
+![image10](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/Wireframes/PatientsWireframe.jpg)
 
 ### Custom UI
 
-![image8][image8]
+![image7](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/Wireframes/LoginPageWireframe.jpg)
 
 <!-- DEVELOPMENT PROCESS -->
 ## Development Process
