@@ -146,25 +146,17 @@ The `Conceptual Process` is the set of actions, activities and research that was
 <br>
 
 ### Wireframes
-<h4>Login Page</h4>
+<h4>Login/Register Page</h4>
 
-![image6](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/Wireframes/LoginPageWireframe.jpg)
+![image6](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/Wireframes/WireframeLoginRegister.jpg)
 
-<h4>Register Page</h4>
+<h4>Landing Page where you can manage appointments</h4>
 
-![image7](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/Wireframes/RegisterFormWireframe.jpg)
+![image7](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/Wireframes/LandingMockup.jpg)
 
-<h4>Appointments Page</h4>
+<h4>Doctor and Patient management page</h4>
 
-![image8](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/Wireframes/LandingPageWireframe.jpg)
-
-<h4>Doctors Page</h4>
-
-![image9](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/Wireframes/DoctorsWireframe.jpg)
-
-<h4>Patients Page</h4>
-
-![image10](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/Wireframes/PatientsWireframe.jpg)
+![image8](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/Wireframes/DoctorPatientWireframe.jpg)
 
 <!-- DEVELOPMENT PROCESS -->
 ## Development Process
