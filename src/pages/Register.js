@@ -270,7 +270,8 @@ function Register() {
                     <h1>Register Now!</h1>
 
                     <div className="imgArea">
-                        <div className="profile_img" id="profileImg"></div>
+                        <div className="profile_img" id="profileImg">
+                        </div>
                         <p>Upload a profile image</p>
                         <input name="imageUrl" className="imgInput" type="file" onChange={imageVal}/>
                     </div>

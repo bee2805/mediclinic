@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import EditDoctor from "./EditDoctor";
 
@@ -18,7 +18,6 @@ const DoctorCard = (props) => {
             axios.post('http://localhost:8888/mediclinicApi/deleteDoctor.php', doctorId)
             .then((res) => {
                 let data = res.data;
-                console.log(res);
                 props.rerender(true);
             });
 
@@ -33,7 +32,9 @@ const DoctorCard = (props) => {
             <div className="doctorCard">
                 <div className="editDoctor" onClick={editDoctor}></div>
                 <div className="deleteDoctor" onClick={deleteDoctor}></div>
-                <div className="doctorProfile1"></div>
+                <div className="doctorProfile">
+                    <img src={props.image} className="doctorImage"/>
+                </div>
                 <h4>Dr. {props.surname}</h4>
                 <p id="specialiation">{props.specialization}</p>
                 <hr/>

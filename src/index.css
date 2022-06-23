@@ -700,7 +700,7 @@ hr{
   margin-bottom: 2%;
 }
 
-.doctorProfile1{
+.doctorProfile{
   margin: 0 auto;
   width: 90px;
   height: 90px;
@@ -714,84 +714,9 @@ hr{
   border: #0C8FA3 4px solid;
 }
 
-.doctorProfile2{
-  margin: 0 auto;
-  width: 90px;
-  height: 90px;
+.doctorProfile img{
+  width: 100%;
   border-radius: 50%;
-  background-image: url('assets/doctors/Doc2.jpg');
-  background-position: center;
-  background-size: cover;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  border: #0C8FA3 4px solid;
-}
-
-.doctorProfile3{
-  margin: 0 auto;
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background-image: url('assets/doctors/Doc3.jpg');
-  background-position: center;
-  background-size: cover;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  border: #0C8FA3 4px solid;
-}
-
-.doctorProfile4{
-  margin: 0 auto;
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background-image: url('assets/doctors/Doc4.jpg');
-  background-position: center;
-  background-size: cover;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  border: #0C8FA3 4px solid;
-}
-
-.doctorProfile5{
-  margin: 0 auto;
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background-image: url('assets/doctors/Doc5.jpg');
-  background-position: center;
-  background-size: cover;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  border: #0C8FA3 4px solid;
-}
-
-.doctorProfile6{
-  margin: 0 auto;
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background-image: url('assets/doctors/Doc6.jpg');
-  background-position: center;
-  background-size: cover;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  border: #0C8FA3 4px solid;
-}
-
-.doctorProfile7{
-  margin: 0 auto;
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background-image: url('assets/doctors/Doc7.jpg');
-  background-position: center;
-  background-size: cover;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
