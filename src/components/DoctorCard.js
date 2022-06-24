@@ -31,7 +31,7 @@ const DoctorCard = (props) => {
     },[]);
 
     const editDoctor = () => {
-        setModal(<EditDoctor id={props.uniqueId} upRender={props.rerender} rerender={setModal} origionalName={props.name} origionalSurname={props.surname} origionalAge={props.age} origionalGender={props.gender} origionalCell={props.cellNo} origionalEmail={props.email} origionalSpecialization={props.specialization} origionalRoom={props.room}/>);
+        setModal(<EditDoctor id={props.uniqueId} upRender={props.rerender} rerender={setModal} origionalName={props.name} origionalSurname={props.surname} origionalAge={props.age} origionalGender={props.gender} origionalCell={props.cellNo} origionalEmail={props.email} origionalSpecialization={props.specialization}/>);
     }
 
     const deleteDoctor = () => {

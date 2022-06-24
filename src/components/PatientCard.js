@@ -1,10 +1,34 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import EditPatient from "./EditPatient";
+import {useNavigate} from 'react-router-dom';
+
 
 const PatientCard = (props) => {
+    const navigate = useNavigate();
 
+    const [renderPatientImage, setRenderPatientImage] = useState();
     const [modal, setModal] = useState();
+    
+    useEffect(() =>{
+        const userSession = sessionStorage.getItem('activeUser');
+        if(userSession === '' || userSession === null){
+            navigate('/');
+        }
+
+        let patientId = {id: props.uniqueId};
+        axios.post('http://localhost:8888/mediclinicApi/readPatientProfile.php', patientId)
+        .then((res)=>{
+            let data = res.data;
+            let source = data[0].image;
+            let renderPath = 'http://localhost:8888/mediclinicApi/' + source;
+            setRenderPatientImage(renderPath);
+            console.log(renderPath);
+        })
+        .catch(err=>{
+            console.log(err);
+        })
+    },[]);
 
     const editPatient = () => {
         setModal(<EditPatient id={props.uniqueId} upRender={props.rerender} rerender={setModal} origionalName={props.name} origionalSurname={props.surname} origionalAge={props.age} origionalGender={props.gender} origionalCell={props.cellNo} origionalEmail={props.email} origionalMedicalAidNo={props.specialization}/>);
@@ -33,7 +57,9 @@ const PatientCard = (props) => {
             <div className="patientCard">
                 <div className="editPatient" onClick={editPatient}></div>
                 <div className="deletePatient" onClick={deletePatient}></div>
-                <div className="patientProfile1"></div>
+                <div className="patientProfile">
+                    <img src={renderPatientImage} className="patientImage"/>
+                </div>
                 <h4>{props.name} {props.surname}</h4>
                 <p id="medicalAidNo">{props.medicalAidNo}</p>
                 <hr/>

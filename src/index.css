@@ -574,6 +574,11 @@ hr{
   width: 90%;
 }
 
+#patientName{
+  width: 100%;
+  margin-bottom: 2%;
+}
+
 #date, #time{
   width: 42.6%;
   cursor: text;
@@ -770,12 +775,12 @@ form{
   margin-bottom: 2%;
 }
 
-.addDoctor #specialization, #room{
-  width: 40%;
+.addDoctor #specialization{
+  width: 87.5%;
   margin-bottom: 2%;
 }
 
-.addDoctor #specialization, #cellInput{
+.addDoctor #cellInput{
   margin-right: 2%;
 }
 
@@ -808,8 +813,12 @@ form{
   background-color: white;
 }
 
-.editDoctorProfile #name, #surname, #age, #gender, #cellNo, #email, #specialization, #room{
+.editDoctorProfile #name, #surname, #age, #gender, #cellNo, #email{
   width: 42%;
+}
+
+.editDoctorProfile #specialization{
+  width: 91%;
 }
 
 .editDoctorProfile #age, #cellNo, #specialization{
@@ -823,7 +832,7 @@ form{
 
 /* --------------------------------------------------------------------- */
 
-.patientProfile1{
+.patientProfile{
   margin: 0 auto;
   width: 90px;
   height: 90px;
@@ -837,12 +846,17 @@ form{
   border: #0C8FA3 4px solid;
 }
 
+.patientProfile img{
+  width: 100%;
+  border-radius: 50%;
+}
+
 .patientCard p {
   margin-top: 1%;
   margin-bottom: 1%;
 }
 
-.addPatient #nameInput, #surnameInput, #ageInput, #genderInput, #cellInput, #medicalAidNoInput{
+.addPatient #ageInput, #genderInput, #cellInput, #medicalAidNoInput, #nameInput{
   width: 40%;
   margin-bottom: 2%;
 }
@@ -934,4 +948,8 @@ form{
 
 .editPatientProfile h2{
   margin-top: 0;
+}
+
+.addPatient .imgArea{
+  height: 10vh;
 }

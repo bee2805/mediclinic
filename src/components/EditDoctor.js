@@ -12,8 +12,7 @@ const EditDoctor = (props) => {
         newGender: props.origionalGender,
         newCellNo: props.origionalCell,
         newEmail: props.origionalEmail,
-        newSpecialization: props.origionalSpecialization,
-        newRoom: props.origionalRoom
+        newSpecialization: props.origionalSpecialization
     });
 
     const closeModal = () => {
@@ -28,7 +27,6 @@ const EditDoctor = (props) => {
         document.getElementById('cellNo').innerHTML = props.origionalCell;
         document.getElementById('email').innerHTML = props.origionalEmail;
         document.getElementById('specialization').innerHTML = props.origionalSpecialization;
-        document.getElementById('room').innerHTML = props.origionalRoom;
     },[]);
 
     const nameChange = (e) => {
@@ -73,12 +71,6 @@ const EditDoctor = (props) => {
         console.log(updatedDoctor);
     }
 
-    const roomChange = (e) => {
-        let value = e.target.value;
-        setUpdatedDoctor({...updatedDoctor, newGender:value});
-        console.log(updatedDoctor);
-    }
-
     const updateDoctor = () => {
         axios.post('http://localhost:8888/mediclinicApi/updateDoctor.php', updatedDoctor)
         .then((res) => {
@@ -103,7 +95,6 @@ const EditDoctor = (props) => {
                 <input name="cellNo" id="cellNo" placeholder="Cellphone Number" onChange={cellChange}/>
                 <input name="email" id="email" placeholder="Email Address" onChange={emailChange}/>
                 <input name="specialization" id="specialization" placeholder="Specialization" onChange={specializationChange}/>
-                <input name="room" id="room" placeholder="Room" onChange={roomChange}/>
                 <div className='button' onClick={updateDoctor}>Edit this doctor</div>
             </form>
         </div>

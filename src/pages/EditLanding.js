@@ -1,14 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import SideNav from "./SideNav";
 import axios from "axios";
 import {useNavigate} from 'react-router-dom';
 import Appointments from "../components/Appointment";
-import { render } from "@testing-library/react";
 import EditAppointment from "../components/EditAppointment";
 
 function EditLanding() {
 
     const navigate = useNavigate();
+    const [data, setData] = useState([]);
+    const [dataPatient, setDataPatient] = useState([]);
+    const [roomData, setRoomData] = useState([]);
+
+    let selectedDoctor = useRef();
+    let selectedRoom = useRef();
 
     const [userId, setUserId] = useState({
         activeUser: sessionStorage.getItem('activeUser')
@@ -42,6 +47,39 @@ function EditLanding() {
         room: ''
     });
 
+    useEffect(() => {
+        axios.get('http://localhost:8888/mediclinicApi/readDoctors.php', userId)
+        .then((res) => {
+            let docData = res.data;
+            setData(docData);
+        })
+        .catch(err=>{
+            console.log(err);
+        })
+    },[]);
+
+    useEffect(() => {
+        axios.get('http://localhost:8888/mediclinicApi/readPatients.php', userId)
+        .then((res) => {
+            let PatientData = res.data;
+            setDataPatient(PatientData);
+        })
+        .catch(err=>{
+            console.log(err);
+        })
+    },[]);
+
+    useEffect(() => {
+        axios.get('http://localhost:8888/mediclinicApi/readRoom.php', userId)
+        .then((res) => {
+            let roomData = res.data;
+            setRoomData(roomData);
+        })
+        .catch(err=>{
+            console.log(err);
+        })
+    },[]);
+
     const nameVal = (e) => {
         const value = e.target.value;
         setNewAppointment({... newAppointmet, patientName: value});
@@ -74,17 +112,17 @@ function EditLanding() {
         if(newAppointmet.time !== ''){setTimeError();}
     }
 
-    const docVal = (e) => {
-        const value = e.target.value;
-        setNewAppointment({...newAppointmet, doc: value});
+    const docVal = () => {
+        const doctorName = selectedDoctor.current.value;
+        setNewAppointment({...newAppointmet, doctorName: doctorName});
 
         // validate if the field is empty.
         if(newAppointmet.doc !== ''){setDocError();}
     }
 
-    const roomVal = (e) => {
-        const value = e.target.value;
-        setNewAppointment({...newAppointmet, room: value});
+    const roomVal = () => {
+        const room = selectedRoom.current.value;
+        setNewAppointment({...newAppointmet, room: room});
 
         // validate if the field is empty.
         if(newAppointmet.room !== ''){setRoomError();}
@@ -109,12 +147,11 @@ function EditLanding() {
 
     const addNewAppointment = (e) => {
         e.preventDefault();
-        document.getElementById('name').value = "";
-        document.getElementById('medicalAid').value = "";
+        document.getElementById('patientName').value = "Select Patient";
         document.getElementById('date').value = "";
         document.getElementById('time').value = "";
-        document.getElementById('dr').value = "";
-        document.getElementById('drRoom').value = "";
+        document.getElementById('dr').value = "Select Doctor";
+        document.getElementById('drRoom').value = "Select Room";
 
         axios.post('http://localhost:8888/mediclinicApi/addAppointment.php', newAppointmet)
         .then((res) => {
@@ -123,6 +160,18 @@ function EditLanding() {
             setRenderAppointments(true);
         });
     }
+
+    // sort dates
+    // useEffect(() => {
+    //     axios.get('http://localhost:8888/mediclinicApi/readRoom.php', userId)
+    //     .then((res) => {
+    //         let roomData = res.data;
+    //         setRoomData(roomData);
+    //     })
+    //     .catch(err=>{
+    //         console.log(err);
+    //     })
+    // },[]);
     
     return (
         <div className="editLanding">
@@ -175,15 +224,19 @@ function EditLanding() {
 
                 <form className="addAppointment">
                     <h2>Add new appointment:</h2>
-                    <input name="name" id="name" placeholder="Name and Surname" onChange={nameVal}/>
-                    <input name="medicalAidNo" id="medicalAid" placeholder="Medical Aid Number" onChange={medicalAidNoVal}/>
+                    <select name="name" id="patientName" onChange={nameVal}>
+                        <option>Select Patient</option>
+                        {dataPatient.map(item => <option key={item.id}>{item.name} {item.surname}</option>)}
+                    </select>
                     <input name="date" type="date" id="date" onChange={dateVal}/>
                     <input name="time" type="time" id="time" onChange={timeVal}/>
-                    <select name="doc" id="dr" onChange={docVal}>
+                    <select name="doc" id="dr" ref={selectedDoctor} onChange={docVal}>
                         <option>Select Doctor</option>
+                        {data.map(item => <option key={item.id}>{item.surname}</option>)}
                     </select>
-                    <select name="room" id="drRoom" onChange={roomVal}>
+                    <select name="room" id="drRoom" ref={selectedRoom} onChange={roomVal}>
                         <option>Select Room</option>
+                        {roomData.map(item => <option key={item.id}>{item.room}</option>)}
                     </select>
                     <div className='button' onClick={addNewAppointment}>+ Add Appointment</div>
                 </form>

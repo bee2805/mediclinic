@@ -33,7 +33,6 @@ function EditDoctors() {
         email: '',
         password: '',
         specialization: '',
-        room: ''
     });
 
     const imageVal = (e) => {           
@@ -103,21 +102,14 @@ function EditDoctors() {
         setInputs({...inputs, specialization: value});
     }
 
-    const roomVal = (e) => {
-        // get input
-        const value = e.target.value;
-        setInputs({...inputs, room: value});
-    }
-
     const [renderDoctors, setRenderDoctors] = useState();
-    // const [renderImage, setRenderImage] = useState();
 
     // this useEffect will get existing doctors and doctors added by receptionist
     useEffect(() => {
         axios.post('http://localhost:8888/mediclinicApi/readDoctors.php', userId)
         .then((res) => {
             let data = res.data;
-            let renderDoctors = data.map((item) => <DoctorCard key={item.id} rerender={setRenderDoctors} uniqueId={item.id} name={item.name} surname={item.surname} age={item.age} gender={item.gender} cellNo={item.cellNo} email={item.email} specialization={item.specialization} room={item.room}/>);
+            let renderDoctors = data.map((item) => <DoctorCard key={item.id} rerender={setRenderDoctors} uniqueId={item.id} name={item.name} surname={item.surname} age={item.age} gender={item.gender} cellNo={item.cellNo} email={item.email} specialization={item.specialization}/>);
             setDoctors(renderDoctors);
             setRenderDoctors(false);
         })
@@ -173,7 +165,6 @@ function EditDoctors() {
                     <input type="text" id="emailInput" placeholder="Email Address" onChange={emailVal}/>
                     <input type="password" id="password" placeholder="Password" onChange={passwordVal}/>
                     <input type="text" id="specialization" placeholder="Specialization" onChange={specializationVal}/>
-                    <input type="text" id="room" placeholder="Room" onChange={roomVal}/>
                 </form>
                 <div className="button" onClick={addDoctor}>+  Add Doctor</div>
             </div>

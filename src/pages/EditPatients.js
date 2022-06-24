@@ -23,6 +23,7 @@ function EditPatients() {
     const [patients, setPatients] = useState();
 
     const [inputs, setInputs] = useState({
+        image: '',
         name: '',
         surname: '',
         age: '', 
@@ -33,22 +34,22 @@ function EditPatients() {
         medicalAidNo: ''
     });
 
-    // const imageVal = (e) => {           
-    //     let file = e.target.files[0];
-    //     let reader = new FileReader();
+    const imageVal = (e) => {           
+        let file = e.target.files[0];
+        let reader = new FileReader();
 
-    //     reader.onloadend = function() {
-    //         console.log(reader.result);
-    //         let imgFile = reader.result;
+        reader.onloadend = function() {
+            console.log(reader.result);
+            let imgFile = reader.result;
 
-    //         setInputs({...inputs, image: imgFile});
+            setInputs({...inputs, image: imgFile});
 
-    //         let image = new Image();
-    //         image.src = reader.result;
-    //         document.getElementById('profileImg').appendChild(image);
-    //     }
-    //     reader.readAsDataURL(file);
-    // }
+            let image = new Image();
+            image.src = reader.result;
+            document.getElementById('profileImg').appendChild(image);
+        }
+        reader.readAsDataURL(file);
+    }
 
     const nameVal = (e) => {
         // get input
@@ -144,13 +145,14 @@ function EditPatients() {
                 {patients}
             </div>
             <div className="addPatient">
+                <div className="patientImg"></div>
                 <h2>Add a Patient</h2>
                 <form>
-                    {/* <div className="imgArea">
+                    <div className="imgArea">
                         <div className="profile_img" id="profileImg"></div>
                         <p>Upload a profile image</p>
-                        <input name="imageUrl" className="imgInput" type="file"/>
-                    </div> */}
+                        <input name="imageUrl" className="imgInput" type="file" onChange={imageVal}/>
+                    </div>
                     <input type="text" id="nameInput" placeholder="Name" onChange={nameVal}/>
                     <input type="text" id="surnameInput" placeholder="Surname" onChange={surnameVal}/>
                     <input type="number" id="ageInput" placeholder="age" onChange={ageVal}/>
@@ -161,7 +163,6 @@ function EditPatients() {
                     <input type="password" id="password" placeholder="Password" onChange={passwordVal}/>
                 </form>
                 <div className="button" onClick={addPatient}>+  Add Patient</div>
-                <div className="patientImg"></div>
             </div>
         </div>
     );

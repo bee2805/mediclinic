@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import EditAppointment from "./EditAppointment";
 
@@ -32,7 +32,7 @@ const Appointments = (props) => {
             {modal}
             <div className='row_item'>
                 <p><strong>Patient: </strong>{props.patientName}</p>
-                <p><strong>Doctor: </strong>{props.doctorName}</p>
+                <p><strong>Doctor: </strong>Dr. {props.doctorName}</p>
                 <p><strong>Time: </strong>{props.time}</p>
                 <p><strong>Room: </strong>{props.room}</p>
                 <div className="delete" onClick={deleteAppointment}></div>
