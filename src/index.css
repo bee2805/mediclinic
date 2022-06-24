@@ -60,11 +60,14 @@ input[type="file"]{
 .registerForm .profile_img{
   width: 80px;
   height: 80px;
-  background-color: #10AFBA;
   float: left;
   margin-right: 3%;
   border-radius: 50%;
   margin-left: 16%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: #0C8FA3 1px solid;
 }
 
 .imgArea p{
@@ -126,10 +129,16 @@ input[type="file"]{
 .profile_img{
   width: 80px;
   height: 80px;
-  background-color: #10AFBA;
   float: left;
   margin-right: 4%;
   border-radius: 50%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border: #0C8FA3 4px solid;
+  background-image: url('assets/icons/userIcon.png');
+  background-size: cover;
+  background-position: center;
 }
 
 .button{
@@ -299,7 +308,6 @@ hr{
 .profile_img img{
   width: 100%;
   border-radius: 50%;
-  border: 5px solid #10AFBA;
 }
 
 .registerForm h1{
@@ -708,10 +716,6 @@ hr{
   background-image: url('assets/doctors/Doc1.jpg');
   background-position: center;
   background-size: cover;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  border: #0C8FA3 4px solid;
 }
 
 .doctorProfile img{
@@ -825,90 +829,6 @@ form{
   height: 90px;
   border-radius: 50%;
   background-image: url('assets/patients/Patient1.jpg');
-  background-position: center;
-  background-size: cover;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  border: #0C8FA3 4px solid;
-}
-
-.patientProfile2{
-  margin: 0 auto;
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background-image: url('assets/patients/Patient2.jpg');
-  background-position: center;
-  background-size: cover;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  border: #0C8FA3 4px solid;
-}
-
-.patientProfile3{
-  margin: 0 auto;
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background-image: url('assets/patients/Patient3.jpg');
-  background-position: center;
-  background-size: cover;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  border: #0C8FA3 4px solid;
-}
-
-.patientProfile4{
-  margin: 0 auto;
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background-image: url('assets/patients/Patient4.jpg');
-  background-position: center;
-  background-size: cover;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  border: #0C8FA3 4px solid;
-}
-
-.patientProfile5{
-  margin: 0 auto;
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background-image: url('assets/patients/Patient5.jpg');
-  background-position: center;
-  background-size: cover;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  border: #0C8FA3 4px solid;
-}
-
-.patientProfile6{
-  margin: 0 auto;
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background-image: url('assets/patients/Patient6.jpg');
-  background-position: center;
-  background-size: cover;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  border: #0C8FA3 4px solid;
-}
-
-.patientProfile7{
-  margin: 0 auto;
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background-image: url('assets/patients/Patient7.jpg');
   background-position: center;
   background-size: cover;
   box-sizing: border-box;

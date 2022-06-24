@@ -89,6 +89,8 @@ const EditDoctor = (props) => {
         });
     }
 
+    console.log(updatedDoctor);
+
     return(
         <div className="editDoctorProfile">
             <form>

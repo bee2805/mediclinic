@@ -110,19 +110,15 @@ function EditDoctors() {
     }
 
     const [renderDoctors, setRenderDoctors] = useState();
-    const [renderImage, setRenderImage] = useState();
+    // const [renderImage, setRenderImage] = useState();
 
     // this useEffect will get existing doctors and doctors added by receptionist
     useEffect(() => {
         axios.post('http://localhost:8888/mediclinicApi/readDoctors.php', userId)
         .then((res) => {
             let data = res.data;
-            let source = data[0].image;
-            let renderPath = 'http://localhost:8888/mediclinicApi/' + source;
-            setRenderImage(renderPath);
-            let renderDoctors = data.map((item) => <DoctorCard key={item.id} rerender={setRenderDoctors} uniqueId={item.id} name={item.name} surname={item.surname} specialization={item.specialization} gender={item.gender} age={item.age} cellNo={item.cellNo} image={renderPath}/>);
+            let renderDoctors = data.map((item) => <DoctorCard key={item.id} rerender={setRenderDoctors} uniqueId={item.id} name={item.name} surname={item.surname} age={item.age} gender={item.gender} cellNo={item.cellNo} email={item.email} specialization={item.specialization} room={item.room}/>);
             setDoctors(renderDoctors);
-            console.log(renderPath)
             setRenderDoctors(false);
         })
         .catch(err=>{
@@ -140,7 +136,7 @@ function EditDoctors() {
         document.getElementById('password').value = "";
         document.getElementById('specialization').value = "";
         document.getElementById('room').value = "";
-        document.getElementById('imgInput').value = "";
+        // document.getElementById('profileImg').removeChild(imageVal);
 
 
         axios.post('http://localhost:8888/mediclinicApi/addDoctors.php', inputs)
