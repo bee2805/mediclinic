@@ -7,8 +7,20 @@ const Appointments = (props) => {
     const [modal, setModal] = useState();
 
     const editAppointment = () => {
-        setModal(<EditAppointment upRender={props.rerender} rerender={setModal} origionalPatientName={props.patientName} origionalDoctorName={props.doctorName} origionalTime={props.time} origionalRoom={props.room} id={props.uniqueId}/>);
+        setModal(<EditAppointment upRender={props.rerender} rerender={setModal} origionalPatientName={props.patientName} origionalDoctorName={props.doctorName} origionalDate={props.date} origionalTime={props.time} origionalRoom={props.room} id={props.uniqueId}/>);
     }
+
+
+    // tried to sort times - work but isn't rendering in order
+    // const sortTimes = () => {
+    //     axios.get('http://localhost:8888/mediclinicApi/readAppointments.php')
+    //     .then((res) => {
+    //         let data = res.data;
+    //         let times = data.map(item => item.time);
+    //         let sortedtimes = times.sort();
+    //         console.log(sortedtimes);
+    //     });
+    // }
 
     const deleteAppointment = () => {
         if(window.confirm("Are you sure you want to delete this Appointment?") === true){
@@ -17,7 +29,6 @@ const Appointments = (props) => {
             axios.post('http://localhost:8888/mediclinicApi/deleteAppointment.php', appointmentId)
             .then((res) => {
                 let data = res.data;
-                console.log(data);
                 props.rerender(true);
             });
             

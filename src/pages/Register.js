@@ -9,6 +9,8 @@ import invalid from "../assets/icons/invalid.svg";
 function Register() {
 
     const navigate = useNavigate();
+    const [passwordType, setPasswordType] = useState("password");
+    const [passwordConType, setPasswordConType] = useState("password");
 
     const [inputs, setInputs] = useState({
         image: '',
@@ -186,6 +188,24 @@ function Register() {
         }
     }
 
+    const togglePassword =()=>{
+        if(passwordType==="password"){
+            setPasswordType("text");
+            
+            return;
+        }
+        setPasswordType("password")
+    }
+
+    const toggleConPassword =()=>{
+        if(passwordConType==="password"){
+            setPasswordConType("text");
+            
+            return;
+        }
+        setPasswordConType("password")
+    }
+
     // submit event!
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -292,9 +312,11 @@ function Register() {
                     {rankError}
                     <input name="rank" type="text" id="rankInputRegister" placeholder="Rank" onChange={rankVal}/>
                     {passwordError}
-                    <input name="password" type="password" id="passwordRegister" placeholder="Password" onChange={passwordVal}/>
+                    <input name="password" type={passwordType} id="passwordRegister" placeholder="Password" onChange={passwordVal}/>
+                    <div className="passwordIcon" onClick={togglePassword}>{ passwordType==="password"? <p>show</p> : <p>hide</p> }</div>
                     {passwordConError}
-                    <input type="password" id="confirmPasswordRegister" placeholder="Confirm Password" onChange={passwordConVal}/>
+                    <input type={passwordConType} id="confirmPasswordRegister" placeholder="Confirm Password" onChange={passwordConVal}/>
+                    <div className="passwordIcon" onClick={toggleConPassword}>{ passwordConType==="password"? <p>show</p> : <p>hide</p> }</div>
                     
                     <a href="/"><div className='button' onClick={handleSubmit}>Sign Up!</div></a>
                     <a href="/">Already have an account? Login!</a>

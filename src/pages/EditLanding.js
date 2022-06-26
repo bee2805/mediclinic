@@ -3,17 +3,24 @@ import SideNav from "./SideNav";
 import axios from "axios";
 import {useNavigate} from 'react-router-dom';
 import Appointments from "../components/Appointment";
-import EditAppointment from "../components/EditAppointment";
+import {CalendarComponent} from '@syncfusion/ej2-react-calendars';
+import { registerLicense } from '@syncfusion/ej2-base';
 
 function EditLanding() {
+
+    registerLicense('ORg4AjUWIQA/Gnt2VVhhQlFaclhJXGFWfVJpTGpQdk5xdV9DaVZUTWY/P1ZhSXxRdkNhX39XcnVUQ2lVUkE=');
 
     const navigate = useNavigate();
     const [data, setData] = useState([]);
     const [dataPatient, setDataPatient] = useState([]);
     const [roomData, setRoomData] = useState([]);
+    const [receptionist, setReceptionist] = useState();
+    const [renderImage, setRenderImage] = useState();
+    const [receptionistName, setReceptionistName] = useState([]);
 
     let selectedDoctor = useRef();
     let selectedRoom = useRef();
+    let selectedPatient = useRef();
 
     const [userId, setUserId] = useState({
         activeUser: sessionStorage.getItem('activeUser')
@@ -25,7 +32,23 @@ function EditLanding() {
         if(userSession === '' || userSession === null){
             navigate('/');
         }
+
+        axios.post('http://localhost:8888/mediclinicApi/readReceptionists.php', userId)
+        .then((res) => {
+            let data = res.data;
+            console.log(data);
+
+            let source = data[0].image;
+            let renderPath = 'http://localhost:8888/mediclinicApi/' + source;
+            setRenderImage(renderPath);
+            setReceptionist(data.map(item => item.name));
+            setReceptionistName(data.map(item => item.name + " " + item.surname));
+        })
     },[]);
+
+    const current = new Date();
+
+    const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
 
     // appointments
     const [appointments, setAppointments] = useState();
@@ -80,9 +103,9 @@ function EditLanding() {
         })
     },[]);
 
-    const nameVal = (e) => {
-        const value = e.target.value;
-        setNewAppointment({... newAppointmet, patientName: value});
+    const nameVal = () => {
+        const patientName = selectedPatient.current.value;
+        setNewAppointment({... newAppointmet, patientName: patientName});
 
         // validate if the field is empty.
         if(newAppointmet.patientName !== ''){setNameError();}
@@ -156,22 +179,9 @@ function EditLanding() {
         axios.post('http://localhost:8888/mediclinicApi/addAppointment.php', newAppointmet)
         .then((res) => {
             let data = res.data;
-            console.log(data);
             setRenderAppointments(true);
         });
     }
-
-    // sort dates
-    // useEffect(() => {
-    //     axios.get('http://localhost:8888/mediclinicApi/readRoom.php', userId)
-    //     .then((res) => {
-    //         let roomData = res.data;
-    //         setRoomData(roomData);
-    //     })
-    //     .catch(err=>{
-    //         console.log(err);
-    //     })
-    // },[]);
     
     return (
         <div className="editLanding">
@@ -185,7 +195,9 @@ function EditLanding() {
                 <div className="intro">
                     <div className="landingImg"></div>
                     <div className="introBlock">
-                        <h1>Hello, User!</h1>
+                        <p id="currentDate">{date}</p>
+                        {/* {receptionistData.map(item => item.name)} */}
+                        <h1>Hello, {receptionist}!</h1>
                         <p>Manage all appointments with ease. Here you will be able to see upcoming appointments and you will also be able to add and delete appointments!</p>
                     </div>
                 </div>{/* Intro */}
@@ -203,28 +215,25 @@ function EditLanding() {
 
             </div>{/* Left Content */}
 
-            {/* right component */}
+            {/* right content */}
             <div className="rightContent">
 
+                <div className="receptionistImg">
+                    <img src={renderImage} className="receptionistImage"/>
+                </div>
+                <div className="receptionstName">
+                    <h4>{receptionistName}</h4>
+                </div>
+
                 <div className="upcomingAppointment">
-                    <h2>Next Appointment</h2>
-                    <div className="patientDetails">
-                        <div className="profilePicture"></div>
-                        <div className="appointmentDetails">
-                            <p><strong>Patient: </strong>Kelly Pedro</p>
-                            <p><strong>Medical-Aid No: </strong>095757534</p>
-                            <p><strong>Doctor: </strong>Dr. Smith</p>
-                            <p><strong>Time: </strong>08:30 am</p>
-                            <p><strong>Room: </strong>A3</p>
-                        </div>
-                    </div>
+                    <CalendarComponent></CalendarComponent>
                 </div>
 
                 <hr/>
 
                 <form className="addAppointment">
                     <h2>Add new appointment:</h2>
-                    <select name="name" id="patientName" onChange={nameVal}>
+                    <select name="name" id="patientName" ref={selectedPatient} onChange={nameVal}>
                         <option>Select Patient</option>
                         {dataPatient.map(item => <option key={item.id}>{item.name} {item.surname}</option>)}
                     </select>
@@ -241,7 +250,7 @@ function EditLanding() {
                     <div className='button' onClick={addNewAppointment}>+ Add Appointment</div>
                 </form>
 
-            </div>
+            </div> {/* right content */}
         </div>
     );
 }
