@@ -121,16 +121,16 @@ Run the following in the command-line to install all the required dependencies:
 
 Using CRUD operations appointments can be created, read, updated and deleted from the database. The user is able to easily edit, delete and add new appointments. The user will also be able to see the upcoming appointments for the week. 
 
-![image3][image3]
+![image3](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/Wireframes/LandingFeature.png)
 ### Manage doctor profiles
 
 The user will also be able to add, edit and delete a doctor profile. The doctor profile holds important and personal information about the doctors, such as their name, specialization, age and gender. The user will also be able to see a list of doctor profile cards where they will easily be able to edit and delete the doctors from.
 
-![image4][image4]
+![image4](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/Wireframes/DoctorFeature.png)
 ### Manage patient profiles
 
 Much like the doctors page, the user will also be able to add, edit and delete a patient profile. The user will also be able to see a list of doctor profile cards presenting important information that can be edited or deleted.
-![image5][image5]
+![image5](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/Wireframes/PatientFeature.png)
 
 
 <!-- CONCEPT PROCESS -->
