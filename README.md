@@ -114,9 +114,6 @@ Run the following in the command-line to install all the required dependencies:
 <!-- You can add the links to all of your imagery at the bottom of the file as references -->
 ## Features and Functionality
 
-<!-- note how you can use your gitHub link. Just make a path to your assets folder -->
-![image2][image2]
-
 ### Manage Appointments! 
 
 Using CRUD operations appointments can be created, read, updated and deleted from the database. The user is able to easily edit, delete and add new appointments. The user will also be able to see the upcoming appointments for the week. 
