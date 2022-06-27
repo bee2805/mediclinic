@@ -12,7 +12,7 @@ const EditDoctor = (props) => {
         newGender: props.origionalGender,
         newCellNo: props.origionalCell,
         newEmail: props.origionalEmail,
-        newSpecialization: props.origionalSpecialization
+        newSpecialization: props.origionalSpecialization,
     });
 
     const closeModal = () => {

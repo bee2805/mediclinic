@@ -294,6 +294,12 @@ hr{
   float: left;
 }
 
+.passwordShow{
+  margin-top: -3.3%;
+  position: absolute;
+  margin-left: 24%;
+}
+
 /* -------------------------------------------------------------------- */
 
 /* Register Form */
@@ -431,6 +437,12 @@ hr{
 
 .logOut{
   cursor: pointer;
+}
+
+.sideNav a.active p{
+  text-decoration: underline 3px solid ;
+  font-size: large;
+  color: #DBEFEE;
 }
 
 /* -------------------------------------------------------------------- */
@@ -767,7 +779,6 @@ hr{
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  background-image: url('assets/doctors/Doc1.jpg');
   background-position: center;
   background-size: cover;
 }

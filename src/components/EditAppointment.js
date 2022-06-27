@@ -63,7 +63,7 @@ const EditAppointment = (props) => {
     }, []);
 
     const nameChange = (e) => {
-        let value = e.target.value;
+        let value = selectedPatient.current.value;
         setUpdatedAppointment({...updatedAppointment, newPatient:value});
     }
 

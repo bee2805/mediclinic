@@ -36,7 +36,6 @@ function EditLanding() {
         axios.post('http://localhost:8888/mediclinicApi/readReceptionists.php', userId)
         .then((res) => {
             let data = res.data;
-            console.log(data);
 
             let source = data[0].image;
             let renderPath = 'http://localhost:8888/mediclinicApi/' + source;
@@ -109,14 +108,6 @@ function EditLanding() {
 
         // validate if the field is empty.
         if(newAppointmet.patientName !== ''){setNameError();}
-    }
-
-    const medicalAidNoVal = (e) => {
-        const value = e.target.value;
-        setNewAppointment({...newAppointmet, medicalAidNo: value});
-
-        // validate if the field is empty.
-        if(newAppointmet.medicalAidNo !== ''){setMedicalAidError();}
     }
 
     const dateVal = (e) => {

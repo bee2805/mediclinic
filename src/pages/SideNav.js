@@ -1,5 +1,5 @@
 import React, { useEffect} from "react";
-import {useNavigate} from 'react-router-dom';
+import {NavLink, useNavigate} from 'react-router-dom';
 
 function SideNav() {
 
@@ -22,18 +22,18 @@ function SideNav() {
     return (
         <div className="sideNav">
             <div className="navLogo"></div>
-            <a href="/EditLanding">
+            <NavLink to="/EditLanding">
                 <div className="home"></div>
-                <p>Home</p>
-            </a>
-            <a href="/EditDoctors">
+                <p className="underline">Home</p>
+            </NavLink>
+            <NavLink to="/EditDoctors">
                 <div className="doctors"></div>
                 <p>Doctors</p>
-            </a>
-            <a href="/EditPatients">
+            </NavLink>
+            <NavLink to="/EditPatients">
                 <div className="patients"></div>
                 <p>Patients</p>
-            </a>
+            </NavLink>
 
             <div className="logOut" onClick={setLogout}>
                 <div className="logout"></div>

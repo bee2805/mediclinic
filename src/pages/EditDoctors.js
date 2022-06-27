@@ -127,8 +127,7 @@ function EditDoctors() {
         document.getElementById('emailInput').value = "";
         document.getElementById('password').value = "";
         document.getElementById('specialization').value = "";
-        document.getElementById('room').value = "";
-        // document.getElementById('profileImg').removeChild(imageVal);
+        // document.getElementById('profileImg').removeChild();
 
 
         axios.post('http://localhost:8888/mediclinicApi/addDoctors.php', inputs)

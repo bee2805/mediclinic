@@ -8,6 +8,7 @@ function Login() {
 
     const [emailError, setEmailError] = useState();
     const [passwordError, setPasswordError] = useState();
+    const [passwordType, setPasswordType] = useState("password");
 
     const navigate = useNavigate();
 
@@ -22,6 +23,15 @@ function Login() {
 
         // validate if the field is empty.
         if(inputs.email !== ''){setEmailError(<MiniModalRight message="You must provide an email address."/>);}
+    }
+
+    const togglePassword =()=>{
+        if(passwordType==="password"){
+            setPasswordType("text");
+            
+            return;
+        }
+        setPasswordType("password")
     }
 
     const passwordVal = (e) => {
@@ -68,9 +78,10 @@ function Login() {
                     <div className="loginLogo"></div>
                     <h1>Welcome Back!</h1>
                     <input name="email" type="text" className="email" placeholder="Email" onChange={emailVal}/>
-                    <input name="password" type="password" className="password" placeholder="Password" onChange={passwordVal}/>
+                    <input name="password" type={passwordType} className="password" placeholder="Password" onChange={passwordVal}/>
+                    <div className="passwordShow" onClick={togglePassword}>{ passwordType==="password"? <p>show</p> : <p>hide</p> }</div>
                     <a href="/EditLanding" onClick={handleSubmit}><div className='button'>Login!</div></a>
-                    <a href=""><p>Forgot Passowrd.</p></a>
+                    {/* <a href=""><p>Forgot Passowrd.</p></a> */}
                     <a href="/Register"><p>Don't have an account? Sign up!</p></a>
                 </div>
                 <div className="loginImg"></div>
