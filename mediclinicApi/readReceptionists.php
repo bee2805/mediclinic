@@ -1,0 +1,29 @@
+<?php 
+
+include 'db_connection.php';
+
+header('Access-Control-Allow-Origin: * ');
+header('Access-Control-Allow-Headers: * ');
+
+$request_body = file_get_contents('php://input');
+$data = json_decode($request_body);
+
+$email = $data->activeUser;
+
+$sql = "SELECT * FROM receptionists WHERE email = '$email';";
+$result = mysqli_query($conn, $sql);
+$resultCheck = mysqli_num_rows($result);
+
+if($email === $email){
+
+    $emparray = array();
+
+    while($row = mysqli_fetch_assoc($result)){
+        $emparray[] = $row;
+    }
+
+    echo json_encode($emparray);
+} else {
+    echo "false";
+}
+?>
