@@ -226,7 +226,7 @@ What aspects of this final build contribute to the `Above And Beyond` Component 
 
 To see a run through of the application, click below:
 
-[View Demonstration](path/to/video/demonstration)
+[View Demonstration](https://drive.google.com/drive/folders/1_1iBjYuTwMVvGgUle9eUmxU3zNJFAbbo)
 
 
 See the [open issues](https://github.com/bee2805/mediclinic/issues) for a list of proposed features (and known issues).
