@@ -209,9 +209,20 @@ What aspects of this final build contribute to the `Above And Beyond` Component 
 
 ### Mockups
 
-![image9][image9]
+![image9](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/FinalMockups/Mockup5.png)
 <br>
-![image10][image10]
+
+![image10](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/FinalMockups/Mockup2.png)
+<br>
+
+![image11](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/FinalMockups/Mockup1.png)
+<br>
+
+![image12](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/FinalMockups/Mockup3.png)
+<br>
+
+![image13](https://github.com/bee2805/mediclinic/blob/main/src/assets/ideation/FinalMockups/Mockup4.png)
+<br>
 
 <!-- VIDEO DEMONSTRATION -->
 ### Video Demonstration
